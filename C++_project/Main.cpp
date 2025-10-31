@@ -1,10 +1,11 @@
 #include "MyClass.h"
+#include "Calculator.h"
+#include <iostream>
 
 int main() {
-	MyClass mc("blabla\n");
+	Calculator cl;
 
-	mc.function("drobiz\n");
-	mc.function();
+	std::cout << cl.Sum(-4.2, 2.2);
 
 	return 0;
 }
