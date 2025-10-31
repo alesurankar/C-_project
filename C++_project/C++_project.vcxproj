@@ -123,11 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Account.h" />
     <ClInclude Include="Calculator.h" />
     <ClInclude Include="MyClass.h" />
     <ClInclude Include="NumGuess.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Account.cpp" />
     <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MyClass.cpp" />

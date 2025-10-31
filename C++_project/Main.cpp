@@ -1,27 +1,37 @@
 #include "MyClass.h"
 #include "Calculator.h"
 #include "NumGuess.h"
+#include "Account.h"
 #include <iostream>
 #include <vector>
 
 int main() {
-	std::string task;
-	std::vector<std::string> tasks;
+	Account ac;
+	char choice;
+	int quantity;
 	while (true)
 	{
-
-		std::cout << "add an task\n";
-		std::cin >> task;
-
-		std::cout << "added task: " << task << "\n";
-
-
-		tasks.emplace_back(task);
-
-		for (const std::string& tsk : tasks)
+		std::cout << "(b)alance, (d)eposit, (w)ithdrawl\n";
+		std::cin >> choice;
+		switch (choice)
 		{
-			std::cout << "tasks: " << tsk << "\n";
+		case 'b':
+			ac.Balance();
+			break;
+		case 'd':
+			std::cout << "how much you want to deposit?\n";
+			std::cin >> quantity;
+			ac.Deposit(quantity);
+			break;
+		case 'w':
+			std::cout << "how much do you want to withdrawl?\n";
+			std::cin >> quantity;
+			ac.Withdrawl(quantity);
+			break;
+		default:
+			std::cout << "choose again\n";
 		}
 	}
+
 	return 0;
 }
