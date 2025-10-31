@@ -6,6 +6,7 @@ public:
 	NumGuess();
 	void Decide();
 	bool Test(int input);
+	int GetNum();
 private:
 	std::random_device rd;
 	std::mt19937 rng;

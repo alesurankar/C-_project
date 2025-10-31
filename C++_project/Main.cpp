@@ -20,6 +20,13 @@ int main() {
 		if (!correct)
 		{
 			std::cout << "guessed wrong number\n";
+			if (x < num.GetNum())
+			{
+				std::cout << "to low\n";
+			}
+			else {
+				std::cout << "to high\n";
+			}
 		}
 		else 
 		{

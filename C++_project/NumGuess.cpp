@@ -22,3 +22,8 @@ bool NumGuess::Test(int input)
 		return false;
 	}
 }
+
+int NumGuess::GetNum()
+{
+	return num;
+}
