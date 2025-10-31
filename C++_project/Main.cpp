@@ -2,35 +2,25 @@
 #include "Calculator.h"
 #include "NumGuess.h"
 #include <iostream>
+#include <vector>
 
 int main() {
-	NumGuess num;
-	num.Decide();
-	bool correct = false;
-	while (!correct)
+	std::string task;
+	std::vector<std::string> tasks;
+	while (true)
 	{
-		std::cout << "Guess a number from 0 - 10\n";
 
-		int x;
-		std::cin >> x;
+		std::cout << "add an task\n";
+		std::cin >> task;
 
-		std::cout << "you guessed: " << x << "\n";
+		std::cout << "added task: " << task << "\n";
 
-		correct = num.Test(x);
-		if (!correct)
+
+		tasks.emplace_back(task);
+
+		for (const std::string& tsk : tasks)
 		{
-			std::cout << "guessed wrong number\n";
-			if (x < num.GetNum())
-			{
-				std::cout << "to low\n";
-			}
-			else {
-				std::cout << "to high\n";
-			}
-		}
-		else 
-		{
-			std::cout << "nice, guessed correct number\n";
+			std::cout << "tasks: " << tsk << "\n";
 		}
 	}
 	return 0;
